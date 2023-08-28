@@ -180,14 +180,15 @@ const Field = () => {
   };
 
   const isLocked = () => {
-    const sys: any = sdk.entry.getSys();
+    return true;
+    // const sys: any = sdk.entry.getSys();
 
-    const published =
-      !!sys.publishedVersion && sys.version == sys.publishedVersion + 1;
-    const changed =
-      !!sys.publishedVersion && sys.version >= sys.publishedVersion + 2;
+    // const published =
+    //   !!sys.publishedVersion && sys.version == sys.publishedVersion + 1;
+    // const changed =
+    //   !!sys.publishedVersion && sys.version >= sys.publishedVersion + 2;
 
-    return published || changed;
+    // return published || changed;
   };
 
   const updateSlug = async (locale: string, force = false) => {
